@@ -2,7 +2,7 @@
 namespace GDO\DSGVO;
 
 use GDO\Core\GDT_Template;
-use GDO\User\GDO_Session;
+use GDO\Session\GDO_Session;
 use GDO\User\GDO_User;
 
 final class GDT_DSGVOPanel extends GDT_Template

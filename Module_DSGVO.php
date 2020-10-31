@@ -4,7 +4,7 @@ namespace GDO\DSGVO;
 use GDO\Core\GDO_Module;
 use GDO\UI\GDT_Bar;
 use GDO\User\GDO_User;
-use GDO\User\GDO_Session;
+use GDO\Session\GDO_Session;
 
 /**
  * This module adds a popup about cookie usage until understood
