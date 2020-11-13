@@ -9,9 +9,9 @@ final class GDT_DSGVOPanel extends GDT_Template
 {
 	public function __construct()
 	{
+	    $this->name = 'dsgvo';
 		$this->templateModule = 'DSGVO';
 		$this->templatePath = 'dsgvo.php';
-		
 	}
 	
 	public function render()

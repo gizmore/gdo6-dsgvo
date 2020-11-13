@@ -2,9 +2,9 @@
 namespace GDO\DSGVO;
 
 use GDO\Core\GDO_Module;
-use GDO\UI\GDT_Bar;
 use GDO\User\GDO_User;
 use GDO\Session\GDO_Session;
+use GDO\UI\GDT_Page;
 
 /**
  * This module adds a popup about cookie usage until understood
@@ -20,11 +20,17 @@ final class Module_DSGVO extends GDO_Module
 		$this->addCSS('css/gdo-dsgvo.css');
 	}
 	
-	public function hookBottomBar(GDT_Bar $bar)
+	public function onInitSidebar()
 	{
-		$bar->addField(GDT_DSGVOPanel::make());
+	    if (!GDO_Session::get('gdo-dsgvo'))
+	    {
+	        GDT_Page::$INSTANCE->bottomNav->addField(GDT_DSGVOPanel::make());
+	    }
 	}
 	
+	#############
+	### Hooks ###
+	#############
 	public function hookUserLoggedOut(GDO_User $user)
 	{
 		GDO_Session::set('gdo-dsgvo', 1); # prevent cookie again
