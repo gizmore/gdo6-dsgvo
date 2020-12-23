@@ -7,7 +7,7 @@ use GDO\User\GDO_User;
 
 final class GDT_DSGVOPanel extends GDT_Template
 {
-	public function __construct()
+	protected function __construct()
 	{
 	    $this->name = 'dsgvo';
 		$this->templateModule = 'DSGVO';
