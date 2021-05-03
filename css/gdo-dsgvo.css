@@ -8,6 +8,7 @@
 	height: 100%;
 	pointer-events: unset;
 	display: block;
+    z-index: 5000;
 }
 
 .gdo_dsgvo_info {
@@ -19,5 +20,5 @@
     min-height: 128px;
     padding: 32px;
     font-size: 16px;
-    z-index: 10;
+    z-index: 5001;
 }
