@@ -33,7 +33,7 @@ final class Accept extends Method
 		# Redirect back via response
 		if ($ref = $this->gdoParameterVar('ref'))
 		{
-			$response->add(Website::redirect($ref));
+			$response->addField(Website::redirect($ref));
 		}
 		
 		# return response
